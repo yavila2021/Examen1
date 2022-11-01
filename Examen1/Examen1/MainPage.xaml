@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.MainPage">
+    <Grid BackgroundColor="White">
+        <StackLayout BackgroundColor="White"
+                     Margin="5">
+            <Image Source="ucenm.jpg" />
+            <StackLayout></StackLayout>
+            <Label Text="Nombre"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black"
+                   FontSize="20" />
+            <Entry x:Name="txtnombre"
+                   Placeholder="Ingrese Nombre"
+                   PlaceholderColor="Green"
+                   Keyboard="Text"
+                   TextColor="Green" />
+            <Label Text="Telefono"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black"
+                   FontSize="20" />
+            <Entry x:Name="txtTelefono"
+                   Placeholder="Telfono"
+                   PlaceholderColor="Green"
+                   Keyboard="Numeric"
+                   TextColor="Green" />
+            <Label Text="Edad"
+                   HorizontalTextAlignment="Start"
+                   TextColor="BLACK"
+                   FontSize="2-" />
+            <Entry x:Name="txtedad"
+                   Placeholder="Edad"
+                   Keyboard="Numeric"
+                   PlaceholderColor="Green"
+                   TextColor="Green" />
+            <Label Text="Pais"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black"
+                   FontSize="20" />
+            <Picker Title="Selecione el pais                                 ▼"
+                    TextColor="Green"
+                    TitleColor="Green"
+                    x:Name="txtPais">
+                <Picker.Items>
+                    <x:String>Honduras (504)</x:String>
+                    <x:String>Costa Rica (506)</x:String>
+                    <x:String>Guatemala (502)</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Nota"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black"
+                   FontSize="25" />
+            <Frame Padding="24"
+                   CornerRadius="20"
+                   BackgroundColor="#b5d7a8"
+                   BorderColor="BLACK">
+                <Entry x:Name="txtNota"
+                       Placeholder="Nota"
+                       Keyboard="Text" />
+            </Frame>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnsalvar"
+                        Text="Salvar Contacto"
+                        BackgroundColor="#009e0f"
+                       
+                        Grid.Column="0"
+                        Clicked="Btnsalvar_Clicked" />
+                <Button x:Name="btncontacto"
+                        Text="Contactos"
+                        Grid.Column="1"
+                        Clicked="btncontacto_Clicked"
+                        BackgroundColor="#009e0f" />
+            </Grid>
+        </StackLayout>
+    </Grid>
+</ContentPage>
